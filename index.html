@@ -20,14 +20,14 @@
 </head>
 <body>
     <h1>nailfile - privacy policy</h1>
-    <p class="last-updated">last updated: april 21, 2026</p>
+    <p class="last-updated">last updated: may 5, 2026</p>
 
     <p>we built nailfile so that almost everything stays on your phone. this page explains what does and doesn't leave your device, and why.</p>
 
     <h2>what we collect</h2>
     <ul>
         <li>photos you add to your diary or use for try-on. these are stored on your device, not in the cloud.</li>
-        <li>a random anonymous id we use to count your free try-ons and link your subscription. it isn't tied to your name, email, or apple id.</li>
+        <li>a random anonymous id we use to count your free try-ons and link your subscription. it isn't tied to your name, email, or apple id. for users signed into icloud, this id is synced through apple's icloud key-value storage so your free-try count survives reinstalls and stays consistent across your devices. apple holds the synced copy — we don't see your apple id.</li>
         <li>basic usage events (which screen you opened, whether a try-on succeeded, which paywall you saw) sent to posthog under the random anonymous id above. no personal content, no advertising ids, no cross-app tracking.</li>
         <li>subscription status and purchase history, handled by revenuecat.</li>
     </ul>
@@ -35,14 +35,14 @@
 
     <h2>what happens to your photos</h2>
     <p>diary photos stay on your device. nothing is uploaded.</p>
-    <p>try-on photos are sent to our secure server only at the moment you tap generate. the server forwards them to google's gemini model to render the new look, then sends the result back to you. we delete try-on uploads from our server within 30 days. we don't use your photos to train any model.</p>
+    <p>try-on photos are sent to our secure server only at the moment you tap generate. the server forwards them to fal.ai's hosted ai model to render the new look, then sends the result back to you. we delete try-on uploads from our server within 30 days. we don't use your photos to train any model.</p>
 
     <h2>third parties we use</h2>
     <ul>
-        <li>google gemini — generates try-on images. processed temporarily, not retained by them for training under our terms.</li>
+        <li>fal.ai — hosts and runs the ai model that generates try-on images. photos are processed temporarily, not retained for training.</li>
         <li>cloudflare — hosts the server that brokers try-on requests and stores temporary images.</li>
         <li>revenuecat — manages your subscription and credits.</li>
-        <li>posthog (us region) — product analytics. receives event names (like "tryon_completed" or "paywall_shown") and your anonymous in-app id, along with device type, app version, and country. we do not send your photos, diary notes, name, email, or apple id. we do not enable session replay or ad targeting.</li>
+        <li>posthog (us region) — product analytics. receives event names (like "tryon_completed", "paywall_shown", or "subscription_started") and your anonymous in-app id, along with device type, app version, and country. some events come from our server — subscription state changes from revenuecat — and use the same anonymous id. we do not send your photos, diary notes, name, email, or apple id. we do not enable session replay or ad targeting.</li>
     </ul>
 
     <h2>your choices</h2>
@@ -60,6 +60,6 @@
     <p>if we change anything material we'll update the date at the top and call it out in-app.</p>
 
     <h2>support / contact</h2>
-    <p>need help with nailfile or have a question about your data? email nailfile-support@proton.me and we'll get back to you within a couple of days.</p>
+    <p>need help with nailfile or have a question about your data? email <a href="mailto:nailfile-support@proton.me">nailfile-support@proton.me</a> and we'll get back to you within a couple of days.</p>
 </body>
 </html>
